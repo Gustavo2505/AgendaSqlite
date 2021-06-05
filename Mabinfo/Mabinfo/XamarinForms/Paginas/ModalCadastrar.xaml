@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mabinfo.XamarinForms.Paginas.ModalCadastrar"
+              Visual="Material"
+             BackgroundColor="white">
+    <ContentPage.Content>
+        <Frame CornerRadius="40" BackgroundColor="#gray" Margin="25">
+        <StackLayout >
+
+                <StackLayout Orientation="Horizontal">
+                    <Label HorizontalOptions="FillAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+
+                            <Span Text="Nova Tarefa" TextColor="black" FontSize="20"/>
+                            <Span Text="&#10;"/>
+                            <Span Text="Incluir" TextColor="Black" />
+                        </FormattedString>
+
+                    </Label.FormattedText>
+                    </Label>
+                    <Label FontSize="16"  Text="X" Padding="20, 10 ">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="BtnFecharModal"/>
+                        </Label.GestureRecognizers>
+              
+                    
+                    </Label>
+
+                </StackLayout>
+            
+            
+            
+            
+                <DatePicker x:Name="Data"  BackgroundColor="White"/>
+                <TimePicker x:Name="HorarioInicial"  BackgroundColor="White" />
+                <TimePicker x:Name="HorarioFinal" BackgroundColor="white"/>
+                <Entry x:Name="Nome"  Placeholder="Nome" BackgroundColor="White" ReturnType="Next"/>
+                <Entry x:Name="Nota"   Placeholder="O que fazer" BackgroundColor="White" ReturnType="Done" MaxLength="10"/>
+
+
+                <Button Text="Cadastrar" BackgroundColor="#3d5afe" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" Clicked="Button_Clicked_1">
+                    <Button.Triggers>
+                        <DataTrigger TargetType="Button"
+                     Binding="{Binding Source={x:Reference Nome},
+                                       Path=Text.Length}"
+                     Value="0">
+                            <Setter Property="IsEnabled" Value="False" />
+                    
+                            
+                        </DataTrigger>
+                    </Button.Triggers>
+                    
+                    
+                </Button>
+
+
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

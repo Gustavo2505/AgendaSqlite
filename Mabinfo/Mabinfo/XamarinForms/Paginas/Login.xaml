@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mabinfo.XamarinForms.Paginas.Login"
+             NavigationPage.HasNavigationBar="False"
+            
+  >
+    <ContentPage.Content>
+
+
+
+
+
+
+
+        <AbsoluteLayout 
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="CenterAndExpand">
+
+
+
+            <StackLayout>
+                
+                
+                <Entry
+                Placeholder="Email"
+                WidthRequest="200"
+                Keyboard="Chat"      
+                    ReturnType="Next"
+        
+                  />
+            <Entry
+                IsPassword="True"
+                Placeholder="Senha"
+                 Keyboard="Numeric"
+                ReturnType="Send"
+                />
+          
+
+
+                <Button
+                Text="Entrar"
+                Clicked="logar"
+                Padding="20, 20"
+                CornerRadius="5"
+                BackgroundColor="White"
+                TextColor="black"
+                BorderColor="black"
+                BorderWidth="1"
+            
+                
+                FontAttributes="Bold"/>
+
+        </StackLayout>
+        </AbsoluteLayout>
+
+    </ContentPage.Content>
+</ContentPage>

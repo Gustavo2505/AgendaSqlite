@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mabinfo.XamarinForms.Paginas.Visualizar"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="black"
+             >
+
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions >
+                <RowDefinition 
+                    
+                    Height="1*"/>
+                <RowDefinition 
+                    Height="5*"/>
+
+            </Grid.RowDefinitions>
+
+   
+            <Grid TranslationY="30" BackgroundColor="Red">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+
+                <Image Grid.Column="0" Source="previous.png" Margin="15" BackgroundColor="Yellow">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="BtnVoltar"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Label x:Name="lblTitle" Grid.Column="1" FontSize="20" FontFamily="Bold" TextColor="black" Margin="0, 20, 0, 0"/>
+             
+            </Grid>
+     
+            <Frame 
+                Grid.Row="1" 
+                BackgroundColor="White"
+                CornerRadius="40"
+                TranslationY="30">
+                <StackLayout>
+                    <Label x:Name="lblHoraInicial" Text="Texto 1"/>
+                    <Label x:Name="lblhoraFinal" Text="texto 2"/>
+                    <Label x:Name="lblNota" Text="texto 3"/>
+                </StackLayout>
+            </Frame>
+            
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
